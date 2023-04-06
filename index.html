@@ -95,8 +95,14 @@
     } else {
       // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-      canvas.style.width = "720px";
-      canvas.style.height = "1280px";
+      var meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      document.getElementsByTagName('head')[0].appendChild(meta);
+      container.className = "unity-desktop";
+      canvas.className = "unity-desktop";
+      // canvas.style.width = "720px";
+      // canvas.style.height = "1280px";
     }
 
     loadingBar.style.display = "block";
@@ -107,7 +113,6 @@
       createUnityInstance(canvas, config, (progress) => {
         progressBarFull.style.width = 100 * progress + "%";
       }).then((unityInstance) => {
-        unityInstance.SetFullscreen(1);
         loadingBar.style.display = "none";
         fullscreenButton.onclick = () => {
           unityInstance.SetFullscreen(1);
