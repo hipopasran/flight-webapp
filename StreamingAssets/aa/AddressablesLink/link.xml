@@ -48,7 +48,6 @@
     <type fullname="Game.SkyboxChanger" preserve="all" />
     <type fullname="Game.StartUIScope" preserve="all" />
     <type fullname="Game.StartUIView" preserve="all" />
-    <type fullname="Game.TelegramTest" preserve="all" />
     <type fullname="Game.TutorialUIScope" preserve="all" />
     <type fullname="Game.TutorialUIView" preserve="all" />
     <type fullname="Game.WaveModeConfig" preserve="all" />
